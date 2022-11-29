@@ -31,7 +31,7 @@
     </header>
     <main>
         <p>Hi! I am Santhanam</p>
-        <p>An aspiring computer-something</p>
+        <p>an aspiring computer-something</p>
         <nav>
             <ul>
                 <li>
@@ -73,7 +73,7 @@
 <style>
     :root {
         --hero-font-size: 4vmax;
-        --font-size: 2vmax;
+        --font-size: 1.5vmax;
     }
 
 
@@ -94,7 +94,7 @@
     }
 
     .dark {
-        --bg: #2E3440;
+        --bg: rgba(0, 0, 0, .7);
         --fg: #ECEFF4;
         --svg-filter-invert: 1;
     }
@@ -115,6 +115,8 @@
         color: var(--fg);
 
         height: 100vh;
+
+        transition: color 1s linear;
     }
 
     #theme-switcher {
@@ -200,7 +202,6 @@
 
     footer {
         text-align: center;
-        font-size: var(--font-size);
     }
 
     footer>p {
