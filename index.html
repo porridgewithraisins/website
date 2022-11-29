@@ -217,10 +217,18 @@
 </style>
 
 <script>
+    const storedTheme = localStorage.getItem('theme');
+    if (storedTheme) {
+        document.body.className = storedTheme;
+    }
+
     const themeSwitcher = document.querySelector('#theme-switcher');
     themeSwitcher.addEventListener('click', () => {
         document.body.classList.toggle('dark');
         document.body.classList.toggle('light');
+
+        const newTheme = document.body.className;
+        localStorage.setItem('theme', newTheme);
     })
 </script>
 
