@@ -196,8 +196,10 @@
         filter: invert(var(--svg-filter-invert));
     }
 
-    main>nav>ul>li>a:hover {
-        backdrop-filter: brightness(0.8);
+    @media (hover: hover) {
+        main>nav>ul>li>a:hover {
+            backdrop-filter: blur(0.5rem);
+        }
     }
 
     footer {
