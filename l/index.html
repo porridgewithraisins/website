@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script>
+        const links = await fetch("links.json").then(res => res.json());
+
+        const name = new URLSearchParams(window.location.search).get("name");
+
+        const url = links[name] || "/";
+
+        window.location = url;
+    </script>
+</head>
+
+</html>
