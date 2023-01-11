@@ -17,7 +17,7 @@
         <div id="contacts">
             <span class="contact">
                 <a href="mailto:{{ email }}">
-                    <svg xmlns="http://www.w3.orgq/2000/svg" viewBox="0 0 512 512">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                         <title>Mail</title>
                         <rect x="48" y="96" width="416" height="320" rx="40" ry="40" fill="none" stroke="currentColor"
                             stroke-linecap="round" stroke-linejoin="round" stroke-width="32" />
@@ -97,9 +97,9 @@
                     <span class="list__item__container" data-multiline>
                         <span class="list__item__hero">{{ work.title }}</span>
                         <span class="list__item__content">
-                            <ul>
+                            <ul class="sublist">
                                 {% for detail in work.details %}
-                                <li>{{ detail }}</li>
+                                <li class="sublist__item">{{ detail }}</li>
                                 {% endfor %}
                             </ul>
                         </span>
@@ -130,7 +130,8 @@
                 <li class="list__item">
                     <span class="list__item__container">
                         <span class="list__item__hero">{{ project.title }}</span>
-                        <span class="list__item__content">{{ project.detail }}</span>
+                        <span>{{ project.detail }}</span>
+                        <span class="list__item__right"><a href="{{ project.link }}">{{ project.link_text }}</a></span>
                     </span>
                 </li>
                 {% endfor %}
@@ -236,6 +237,11 @@
             font-weight: bold;
         }
 
+        .list__item__right {
+            margin-left: auto;
+            margin-right: 1rem;
+        }
+
         section:not(#experience) .list__item__hero::after {
             content: ':';
             margin-right: 0.5rem;
@@ -248,6 +254,14 @@
         #skills .list__item::marker,
         #achievements .list__item::marker {
             content: '✔';
+        }
+
+        .sublist__item:not(:last-child) {
+            margin-bottom: 0.6rem;
+        }
+
+        .sublist {
+            padding: 0.5rem;
         }
 
         @media print {

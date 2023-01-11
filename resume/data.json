@@ -91,16 +91,22 @@
             "link_text": "Repository"
         },
         {
+            "title": "My website",
+            "detail": "My personal website, blog and resume builder",
+            "link": "https://github.com/porridgewithraisins/website",
+            "link_text": "santhanam.dev"
+        },
+        {
             "title": "Toolbox",
             "detail": "A large collection of tools and scripts I have written.",
             "link": "https://gist.github.com/porridgewithraisins",
             "link_text": "Github Gists"
         },
         {
-            "title": "My website",
-            "detail": "My personal website and blog",
-            "link": "https://santhanam.dev",
-            "link_text": "santhanam.dev"
+            "title": "NPM packages",
+            "detail": "A collection of NPM packages I have published.",
+            "link": "https://npmjs.com/~porridgewithraisins",
+            "link_text": "npmjs.com"
         }
     ],
     "hobbies": "I like Football, Cricket, Chess, Harry Potter and Music. I learn the Violin and like to sing."
