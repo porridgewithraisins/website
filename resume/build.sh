@@ -3,6 +3,17 @@ sudo dpkg -i chrome.deb
 sudo apt-get install -fy
 cat resume.liquid | npx liquidjs data.json > temp.html
 google-chrome --headless --disable-gpu --no-margins --print-to-pdf=../resume.pdf temp.html
+
+# if its a github action, clean up (based on args 0)
+# if its not, quit
+
+if ["$1" == "github"]; then
+    echo "Cleaning up"
+else
+    echo "Not cleaning up"
+    exit 0
+fi
+
 sudo apt-get remove google-chrome-stable -y
 sudo apt-get autoremove -y
 rm chrome.deb
