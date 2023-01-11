@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>{{ title }}</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{ description }}">
+    <meta name="author" content="{{ author }}">
+    <meta name="keywords" content="{{ keywords }}">
+</head>
+
+<body>
+    <header>
+        <h1>{{ name }}</h1>
+        <div id="contacts">
+            <span class="contact">
+                <a href="mailto:{{ email }}">
+                    <svg xmlns="http://www.w3.orgq/2000/svg" viewBox="0 0 512 512">
+                        <title>Mail</title>
+                        <rect x="48" y="96" width="416" height="320" rx="40" ry="40" fill="none" stroke="currentColor"
+                            stroke-linecap="round" stroke-linejoin="round" stroke-width="32" />
+                        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="32" d="M112 160l144 112 144-112" />
+                    </svg>
+                    <span>{{ email }}</span>
+                </a>
+            </span>
+            <span class="contact">
+                <a href="{{ website }}">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+                        <title>Globe</title>
+                        <path
+                            d="M256 48C141.13 48 48 141.13 48 256s93.13 208 208 208 208-93.13 208-208S370.87 48 256 48z"
+                            fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32" />
+                        <path
+                            d="M256 48c-58.07 0-112.67 93.13-112.67 208S197.93 464 256 464s112.67-93.13 112.67-208S314.07 48 256 48z"
+                            fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32" />
+                        <path
+                            d="M117.33 117.33c38.24 27.15 86.38 43.34 138.67 43.34s100.43-16.19 138.67-43.34M394.67 394.67c-38.24-27.15-86.38-43.34-138.67-43.34s-100.43 16.19-138.67 43.34"
+                            fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="32" />
+                        <path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"
+                            d="M256 48v416M464 256H48" />
+                    </svg>
+                    <span>{{ website }}</span>
+                </a>
+            </span>
+            <span class="contact">
+                <a href="{{ github }}">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+                        <title>Logo Github</title>
+                        <path
+                            d="M256 32C132.3 32 32 134.9 32 261.7c0 101.5 64.2 187.5 153.2 217.9a17.56 17.56 0 003.8.4c8.3 0 11.5-6.1 11.5-11.4 0-5.5-.2-19.9-.3-39.1a102.4 102.4 0 01-22.6 2.7c-43.1 0-52.9-33.5-52.9-33.5-10.2-26.5-24.9-33.6-24.9-33.6-19.5-13.7-.1-14.1 1.4-14.1h.1c22.5 2 34.3 23.8 34.3 23.8 11.2 19.6 26.2 25.1 39.6 25.1a63 63 0 0025.6-6c2-14.8 7.8-24.9 14.2-30.7-49.7-5.8-102-25.5-102-113.5 0-25.1 8.7-45.6 23-61.6-2.3-5.8-10-29.2 2.2-60.8a18.64 18.64 0 015-.5c8.1 0 26.4 3.1 56.6 24.1a208.21 208.21 0 01112.2 0c30.2-21 48.5-24.1 56.6-24.1a18.64 18.64 0 015 .5c12.2 31.6 4.5 55 2.2 60.8 14.3 16.1 23 36.6 23 61.6 0 88.2-52.4 107.6-102.3 113.3 8 7.1 15.2 21.1 15.2 42.5 0 30.7-.3 55.5-.3 63 0 5.4 3.1 11.5 11.4 11.5a19.35 19.35 0 004-.4C415.9 449.2 480 363.1 480 261.7 480 134.9 379.7 32 256 32z" />
+                    </svg>
+                    <span>{{ github }}</span>
+                </a>
+            </span>
+        </div>
+    </header>
+    <main>
+        <section id="education">
+            <h2>Education</h2>
+            <ul class="list">
+                {% for institution in education %}
+                <li class="list__item">
+                    <span class="list__item__container">
+                        <span class="list__item__hero">{{ institution.about }}</span>
+                        <span class="list__item__content">{{ institution.degree }}</span>
+                    </span>
+                </li>
+                {% endfor %}
+            </ul>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul class="list">
+                {% for skill in skills %}
+                <li class="list__item">
+                    <span class="list__item__container">
+                        <span class="list__item__hero">{{ skill.title }}</span>
+                        <span class="list__item__content">{{ skill.detail }}</span>
+                    </span>
+                </li>
+                {% endfor %}
+            </ul>
+        </section>
+
+
+        <section id="experience">
+            <h2>Experience</h2>
+            <ul class="list">
+                {% for work in experience %}
+                <li class="list__item">
+                    <span class="list__item__container" data-multiline>
+                        <span class="list__item__hero">{{ work.title }}</span>
+                        <span class="list__item__content">
+                            <ul>
+                                {% for detail in work.details %}
+                                <li>{{ detail }}</li>
+                                {% endfor %}
+                            </ul>
+                        </span>
+                    </span>
+                </li>
+                {% endfor %}
+            </ul>
+        </section>
+
+        <section id="achievements">
+            <h2>Achievements</h2>
+            <ul class="list">
+                {% for achieve in achievements %}
+                <li class="list__item">
+                    <span class="list__item__container">
+                        <span class="list__item__hero">{{ achieve.title }}</span>
+                        <span class="list__item__content">{{ achieve.detail }}</span>
+                    </span>
+                </li>
+                {% endfor %}
+            </ul>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <ul class="list">
+                {% for project in projects %}
+                <li class="list__item">
+                    <span class="list__item__container">
+                        <span class="list__item__hero">{{ project.title }}</span>
+                        <span class="list__item__content">{{ project.detail }}</span>
+                    </span>
+                </li>
+                {% endfor %}
+        </section>
+
+        <section id="hobbies">
+            <h2>Hobbies</h2>
+            <p>{{ hobbies }}</p>
+        </section>
+    </main>
+
+    <style>
+        @font-face {
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: 400;
+            src: local(''),
+                url('/fonts/open-sans-v34-latin-regular.woff2') format('woff2'),
+                url('/fonts/open-sans-v34-latin-regular.woff') format('woff');
+        }
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            font-size: 0.9rem;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        header,
+        main {
+            margin: 1rem;
+        }
+
+        header {
+            display: flex;
+        }
+
+        h1 {
+            color: #003366;
+            text-transform: uppercase;
+            margin: 0;
+            margin-top: 1rem;
+            padding: 0;
+        }
+
+        #contacts {
+            margin-left: auto;
+            display: flex;
+            flex-direction: column;
+
+            gap: 0.3rem;
+        }
+
+        .contact a {
+            text-decoration: none;
+            color: inherit;
+            font-weight: bold;
+
+            display: flex;
+            align-items: center;
+
+            gap: 0.5rem;
+        }
+
+        .contact a>svg {
+            height: 16px;
+        }
+
+        h2 {
+            background: #003366;
+            color: white;
+            font-weight: bolder;
+            text-transform: uppercase;
+
+            padding: 0.5rem 0.75rem;
+        }
+
+        .list {
+            padding-left: 1.1rem;
+        }
+
+        .list__item:not(:last-child) {
+            margin-bottom: 0.5rem;
+        }
+
+        .list__item {
+            padding-left: 0.7rem;
+        }
+
+        .list__item__container {
+            display: flex;
+        }
+
+        .list__item__container[data-multiline] {
+            flex-direction: column;
+        }
+
+        .list__item__hero {
+            font-weight: bold;
+        }
+
+        section:not(#experience) .list__item__hero::after {
+            content: ':';
+            margin-right: 0.5rem;
+        }
+
+        .list__item::marker {
+            content: '→';
+        }
+
+        #skills .list__item::marker,
+        #achievements .list__item::marker {
+            content: '✔';
+        }
+
+        @media print {
+            @page {
+                margin: 0;
+            }
+
+            .list__item__hero {
+                white-space: nowrap;
+            }
+        }
+
+        @media screen and (min-width: 600px) {
+            .list__item__hero {
+                white-space: nowrap;
+            }
+        }
+    </style>
+</body>
+
+</html>
