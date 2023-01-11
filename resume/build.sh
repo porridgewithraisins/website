@@ -8,10 +8,10 @@ google-chrome --headless --disable-gpu --no-margins --print-to-pdf=../resume.pdf
 # if its not, quit
 
 if ["$1" == "github"]; then
-    echo "Cleaning up"
-else
     echo "Not cleaning up"
     exit 0
+else
+    echo "Cleaning up"
 fi
 
 sudo apt-get remove google-chrome-stable -y
