@@ -6,7 +6,7 @@
     <script type="module">
         const links = await fetch("links.json").then(res => res.json());
 
-        const name = new URLSearchParams(window.location.search).get("name");
+        const name = new URLSearchParams(window.location.search).get("to");
 
         const url = links[name] || "/";
 
