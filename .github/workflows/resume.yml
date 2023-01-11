@@ -18,5 +18,5 @@ jobs:
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add resume.pdf
-          git commit -m 'Updated resume at $(date)'
+          git commit -m "Updated resume at $(date)"
           git push origin main
