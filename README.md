@@ -1,7 +1,12 @@
 # Personal Website
 
-This is the repository that contains my personal website, blog, and various other server-side tools I will one day deploy on my website (such as a url proxy, etc,.) after I can afford hosting.
+This is the repository that contains my personal website, blog, resume builder and link proxy
 
- - `/link`: Contains the source code for my url proxying server side application
- - `/resume` Contains the build files for my [resume](resume.pdf)
+
+## Contents
  - `/blogs` Contains my written blogs
+ - `/resume` Contains the build files for my [resume](resume.pdf)
+ - `/l`: Contains the source code for my url proxy
+
+
+The website is live at https://santhanam.dev
