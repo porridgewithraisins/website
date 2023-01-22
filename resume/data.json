@@ -75,8 +75,8 @@
         {
             "title": "Jam bot",
             "detail": "A well-tested discord music bot with advanced features.",
-            "link": "https://npmjs.com/jambot",
-            "link_text": "Publication"
+            "link": "https://github.com/porridgewithraisins/jam-bot/tree/dev/",
+            "link_text": "Repository"
         },
         {
             "title": "Nand 2 Tetris",
