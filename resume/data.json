@@ -10,11 +10,11 @@
     "education": [
         {
             "about": "2020 - 2024 | IIT Madras",
-            "degree": "B.S in Programming and Data Science"
+            "degree": "B.S in Programming and Data Science."
         },
         {
             "about": "2020 - 2024 | VIT Chennai",
-            "degree": "B.Tech in Computer Science and Engineering"
+            "degree": "B.Tech in Computer Science and Engineering."
         }
     ],
     "skills": [
@@ -40,11 +40,11 @@
         },
         {
             "title": "Languages of note",
-            "detail": "TypeScript, Rust, F#"
+            "detail": "TypeScript, F#, Rust."
         },
         {
             "title": "Other",
-            "detail": "Great knowledge of JavaScript and v8 internals. Good knowledge of cryptography. Moderately skilled in data science"
+            "detail": "Great knowledge of JavaScript and v8 internals. Good knowledge of cryptography. Moderately skilled in data science."
         }
     ],
 
@@ -58,7 +58,7 @@
         },
         {
             "title": "Intern, BMC Software, Jan 2023 - Present",
-            "details": ["Working on a python application with a CI pipeline"]
+            "details": ["Working on a python application with a CI pipeline."]
         }
     ],
     "achievements": [
@@ -92,7 +92,7 @@
         },
         {
             "title": "My website",
-            "detail": "My personal website, blog and resume builder",
+            "detail": "My personal website, blog and resume builder.",
             "link": "https://github.com/porridgewithraisins/website",
             "link_text": "Repository"
         },
